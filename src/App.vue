@@ -20,37 +20,36 @@
           width="100"
         />
       </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
+      <v-spacer />
+      <v-tabs centered dark icons-and-text>
+        <v-tabs-slider></v-tabs-slider>
+        <v-tab :to="{ name: 'todo' }">
+          Todo
+          <v-icon>mdi-format-list-checks</v-icon>
+        </v-tab>
+        <v-tab :to="{ name: 'notes' }">
+          Notes
+          <v-icon>mdi-calendar-text</v-icon>
+        </v-tab>
+        <v-tab :to="{ name: 'tasks' }">
+          Tasks
+          <v-icon>mdi-calendar-check</v-icon>
+        </v-tab>
+      </v-tabs>
+      <v-spacer />
+      <language-selector />
     </v-app-bar>
-
     <v-main>
-      <HelloWorld />
+      <router-view />
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
+import LanguageSelector from "./components/LanguageSelector";
 
 export default {
   name: "App",
-
-  components: {
-    HelloWorld,
-  },
-
-  data: () => ({
-    //
-  }),
+  components: { LanguageSelector },
 };
 </script>

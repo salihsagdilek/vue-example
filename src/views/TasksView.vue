@@ -1,10 +1,10 @@
 <template>
-  <div class="home">anasayfa</div>
+  <div class="home">Tasks</div>
 </template>
 
 <script>
 export default {
-  name: "Home",
+  name: "TasksView",
   components: {},
 };
 </script>

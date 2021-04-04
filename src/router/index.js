@@ -1,23 +1,46 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+import TodoView from "../views/TodoView.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: Home,
+    name: "todo",
+    component: TodoView,
+    children: [
+      {
+        path: "",
+        name: "todo.all",
+        component: () => import("../views/Todo/TodoAll"),
+      },
+      {
+        path: "done",
+        name: "todo.done",
+        component: () => import("../views/Todo/TodoDone"),
+      },
+      {
+        path: "trash",
+        name: "todo.trash",
+        component: () => import("../views/Todo/TodoTrash"),
+      },
+      {
+        path: "undone",
+        name: "todo.undone",
+        component: () => import("../views/Todo/TodoUndone"),
+      },
+    ],
   },
   {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue"),
+    path: "/note",
+    name: "notes",
+    component: () => import("../views/NotesView"),
+  },
+  {
+    path: "/tasks",
+    name: "tasks",
+    component: () => import("../views/TasksView"),
   },
 ];
 
