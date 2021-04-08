@@ -7,7 +7,6 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    name: "todo",
     component: TodoView,
     children: [
       {
@@ -21,14 +20,14 @@ const routes = [
         component: () => import("../views/Todos/TodoDone"),
       },
       {
-        path: "trash",
-        name: "todo.trash",
-        component: () => import("../views/Todos/TodoTrash"),
+        path: "archive",
+        name: "todo.archive",
+        component: () => import("../views/Todos/TodoArchive"),
       },
       {
-        path: "undone",
-        name: "todo.undone",
-        component: () => import("../views/Todos/TodoUndone"),
+        path: "not-completed",
+        name: "todo.not-completed",
+        component: () => import("../views/Todos/TodoNotCompleted"),
       },
     ],
   },

@@ -23,7 +23,7 @@
       <v-spacer />
       <v-tabs centered dark icons-and-text>
         <v-tabs-slider></v-tabs-slider>
-        <v-tab :to="{ name: 'todo' }" exact>
+        <v-tab :to="{ name: 'todo.all' }" exact>
           {{ $t("menu.todo") }}
           <v-icon>mdi-format-list-checks</v-icon>
         </v-tab>
