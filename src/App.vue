@@ -23,7 +23,7 @@
       <v-spacer />
       <v-tabs centered dark icons-and-text>
         <v-tabs-slider></v-tabs-slider>
-        <v-tab :to="{ name: 'todo' }">
+        <v-tab :to="{ name: 'todo' }" exact>
           Todo
           <v-icon>mdi-format-list-checks</v-icon>
         </v-tab>
@@ -34,6 +34,10 @@
         <v-tab :to="{ name: 'tasks' }">
           Tasks
           <v-icon>mdi-calendar-check</v-icon>
+        </v-tab>
+        <v-tab :to="{ name: 'deserts' }">
+          Deserts
+          <v-icon>mdi-account-details-outline</v-icon>
         </v-tab>
       </v-tabs>
       <v-spacer />

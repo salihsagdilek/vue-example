@@ -9,7 +9,7 @@
       >
         <v-btn block color="primary" large> Add Todo </v-btn>
         <v-list flat>
-          <v-subheader>REPORTS</v-subheader>
+          <v-subheader>TODOS</v-subheader>
           <v-list-item-group color="primary">
             <v-list-item :to="{ name: 'todo.all' }" exact>
               <v-list-item-icon>

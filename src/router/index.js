@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import TodoView from "../views/TodoView.vue";
+import TodoView from "../views/Todos/TodoView";
 
 Vue.use(VueRouter);
 
@@ -13,34 +13,39 @@ const routes = [
       {
         path: "",
         name: "todo.all",
-        component: () => import("../views/Todo/TodoAll"),
+        component: () => import("../views/Todos/TodoAll"),
       },
       {
         path: "done",
         name: "todo.done",
-        component: () => import("../views/Todo/TodoDone"),
+        component: () => import("../views/Todos/TodoDone"),
       },
       {
         path: "trash",
         name: "todo.trash",
-        component: () => import("../views/Todo/TodoTrash"),
+        component: () => import("../views/Todos/TodoTrash"),
       },
       {
         path: "undone",
         name: "todo.undone",
-        component: () => import("../views/Todo/TodoUndone"),
+        component: () => import("../views/Todos/TodoUndone"),
       },
     ],
   },
   {
     path: "/note",
     name: "notes",
-    component: () => import("../views/NotesView"),
+    component: () => import("../views/Notes/NotesView"),
   },
   {
     path: "/tasks",
     name: "tasks",
-    component: () => import("../views/TasksView"),
+    component: () => import("../views/Tasks/TasksView"),
+  },
+  {
+    path: "/deserts",
+    name: "deserts",
+    component: () => import("../views/Deserts/DesertsView"),
   },
 ];
 

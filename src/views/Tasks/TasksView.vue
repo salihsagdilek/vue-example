@@ -1,5 +1,7 @@
 <template>
-  <div class="home">Tasks</div>
+  <div class="tasks-view">
+    <v-container> Tasks </v-container>
+  </div>
 </template>
 
 <script>
