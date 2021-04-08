@@ -24,19 +24,19 @@
       <v-tabs centered dark icons-and-text>
         <v-tabs-slider></v-tabs-slider>
         <v-tab :to="{ name: 'todo' }" exact>
-          Todo
+          {{ $t("menu.todo") }}
           <v-icon>mdi-format-list-checks</v-icon>
         </v-tab>
         <v-tab :to="{ name: 'notes' }">
-          Notes
+          {{ $t("menu.notes") }}
           <v-icon>mdi-calendar-text</v-icon>
         </v-tab>
         <v-tab :to="{ name: 'tasks' }">
-          Tasks
+          {{ $t("menu.tasks") }}
           <v-icon>mdi-calendar-check</v-icon>
         </v-tab>
-        <v-tab :to="{ name: 'deserts' }">
-          Deserts
+        <v-tab :to="{ name: 'desserts' }">
+          {{ $t("menu.desserts") }}
           <v-icon>mdi-account-details-outline</v-icon>
         </v-tab>
       </v-tabs>

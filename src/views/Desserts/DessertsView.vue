@@ -113,7 +113,7 @@
 
 <script>
 export default {
-  name: "DesertsView",
+  name: "DessertsView",
   components: {},
   data() {
     return {

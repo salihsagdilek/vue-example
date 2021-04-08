@@ -43,9 +43,9 @@ const routes = [
     component: () => import("../views/Tasks/TasksView"),
   },
   {
-    path: "/deserts",
-    name: "deserts",
-    component: () => import("../views/Deserts/DesertsView"),
+    path: "/desserts",
+    name: "desserts",
+    component: () => import("../views/Desserts/DessertsView"),
   },
 ];
 
